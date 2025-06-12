@@ -1,0 +1,30 @@
+{
+    "name": "TensorFlow Python Project",
+
+    "build": {
+        "dockerfile": "../Dockerfile",
+        "context": ".." 
+    },
+
+    "workspaceFolder": "/workspace/app",
+
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "python.defaultInterpreterPath": "/usr/bin/python",
+                "python.analysis.extraPaths": [
+                    "/workspace/app",
+                    "/usr/local/lib/python3.10/site-packages" 
+                ],
+                "python.terminal.activateEnvironment": false,
+                "python.linting.pylintEnabled": true,
+                "editor.formatOnSave": true
+            },
+            "extensions": [
+                "ms-python.python",
+                "ms-toolsai.jupyter"
+            ]
+        }
+    },
+    "remoteUser": "root"
+}
