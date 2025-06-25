@@ -9,6 +9,14 @@ class Game:
         self.guesses = []
         self.attempts = 0
 
+    def seeded_word(self, word: str):
+        self.words_list = get_words()
+        if word.upper() not in self.words_list:
+            raise ValueError("Word not in words list")
+        self.word = word.upper()
+        self.guesses = []
+        self.attempts = 0
+
     def start_game(self):
         self.words_list = get_words()
         self.word = random.choice(self.words_list).upper()
