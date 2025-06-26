@@ -48,13 +48,13 @@ def process_file(path):
 # Lista-de-Palavras.txt - http://200.17.137.109:8081/novobsi/Members/cicerog/disciplinas/introducao-a-programacao/arquivos-2015-2/algoritmos/Lista-de-Palavras.txt/view
 # pt_BR.txt - https://cgit.freedesktop.org/libreoffice/dictionaries/plain/pt_BR/pt_BR.dic
 
-file_paths = ["br-sem-acentos.txt", "Lista-de-Palavras.txt", "pt_BR.txt"]
+file_paths = ["app/words/pt_BR.txt", "app/words/Lista-de-Palavras.txt", "app/words/br-sem-acentos.txt"]
 
 words = set()
 
 for file_path in file_paths:
     words.update(process_file(file_path))
 
-with open('output_words.txt', 'w', encoding='utf-8') as out_file:
+with open('app/words/output_words.txt', 'w', encoding='utf-8') as out_file:
     for word in sorted(words):
         out_file.write(word + '\n')

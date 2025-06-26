@@ -1,6 +1,9 @@
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from words.words import get_words
-import random
 
+import random
 
 class Game:
     def __init__(self):
